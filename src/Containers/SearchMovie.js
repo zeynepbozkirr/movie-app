@@ -28,6 +28,9 @@ const SearchMovie = ({navigation}) => {
         setMovies([...data.results]);
         setLoad(false);
       });
+    } else {
+      setLoad(false);
+      setMovies([]);
     }
   };
 
