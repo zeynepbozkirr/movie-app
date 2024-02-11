@@ -29,7 +29,7 @@ const renderItem = ({item, onPress, index}) => {
   );
 };
 
-const MovieList = ({movies, setPage, page, refreshFetchData}) => {
+const MovieList = ({movies, setPage, page, refreshFetchData, load}) => {
   const navigation = useNavigation();
 
   const changePage = () => {
@@ -55,7 +55,7 @@ const MovieList = ({movies, setPage, page, refreshFetchData}) => {
             false
           )
         }
-        onEndReached={changePage}
+        onEndReached={page && changePage}
         onEndReachedThreshold={0.1}
         keyExtractor={item => item.id}
         numColumns={2}
@@ -93,4 +93,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MovieList;
+export default React.memo(MovieList);

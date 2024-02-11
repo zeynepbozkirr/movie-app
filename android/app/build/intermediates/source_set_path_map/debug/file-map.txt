@@ -41,6 +41,7 @@ com.movieapp-debug-39 /Users/zeynepbozkir/Desktop/logo/MovieApp/android/app/src/
 com.movieapp-main-40 /Users/zeynepbozkir/Desktop/logo/MovieApp/android/app/src/main/res
 com.movieapp-packaged_res-41 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/packaged_res/debug
 com.movieapp-packaged_res-42 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/lottie-react-native/android/build/intermediates/packaged_res/debug
-com.movieapp-packaged_res-43 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
-com.movieapp-packaged_res-44 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
-com.movieapp-packaged_res-45 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug
+com.movieapp-packaged_res-43 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-gesture-handler/android/build/intermediates/packaged_res/debug
+com.movieapp-packaged_res-44 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
+com.movieapp-packaged_res-45 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
+com.movieapp-packaged_res-46 /Users/zeynepbozkir/Desktop/logo/MovieApp/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug

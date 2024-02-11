@@ -6,14 +6,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Loading, MovieList, UserInfo} from '../Components';
+import {Loading, MovieList, SearchInput, UserInfo} from '../Components';
 import {fetchMovie} from '../Sevices/api';
 import Feather from 'react-native-vector-icons/Feather';
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const Home = ({navigation}) => {
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true);
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -22,7 +22,6 @@ const Home = ({navigation}) => {
   }, [page]);
 
   const getMovie = async page => {
-    setLoad(true);
     const data = await fetchMovie(page);
     if (data) {
       setMovies(prevMovies => [...prevMovies, ...data.results]);
@@ -31,7 +30,7 @@ const Home = ({navigation}) => {
   };
 
   const refreshFetchData = async () => {
-    setLoad(false);
+    setLoad(true);
     setPage(1);
     setMovies([]);
     await getMovie(1);

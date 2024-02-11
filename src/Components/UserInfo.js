@@ -1,21 +1,20 @@
 import React from 'react';
 import {StyleSheet, View, Image, Text} from 'react-native';
-
+import search from '../Assets/search.json';
+import {imageUrl300} from '../Sevices/api';
+import Feather from 'react-native-vector-icons/Feather';
 const UserInfo = () => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
-        <Text style={[styles.text, styles.nameText]}>Merhaba, Zeynep</Text>
+        <Text style={[styles.text, styles.nameText]}>Hi, Zeynep</Text>
         <Text style={[styles.text, styles.surnameText]}>
-          Hadi izlemek istediğin filmi seç
+          Choose the movie you want to watch
         </Text>
       </View>
 
       <View style={styles.imageContainer}>
-        <Image
-          source={{uri: 'https://via.placeholder.com/150'}}
-          style={styles.image}
-        />
+        <Feather name="user" size={24} style={styles.icon} color="black" />
       </View>
     </View>
   );
@@ -26,10 +25,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 12,
-    paddingBottom: 8,
-    borderBottomWidth: 1,
+    paddingBottom: 10,
+    borderBottomWidth: 0.5,
     borderColor: '#B9B9B9',
-    borderStyle: 'dashed',
+    // borderStyle: 'dashed',
+    margin: 10,
   },
 
   textContainer: {
@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   imageContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 99,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#bdbdbd',
     marginLeft: 'auto', // Sağ tarafa hizalamak için
   },
   image: {

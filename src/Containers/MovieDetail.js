@@ -53,7 +53,7 @@ const MovieDetail = ({route}) => {
       {load ? (
         <Loading />
       ) : (
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView style={styles.scrolContain}>
           <Image
             source={{uri: imageUrl300(movies?.poster_path)}}
             style={styles.image}
@@ -110,9 +110,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     paddingBottom: 10,
   },
+  scrolContain: {
+    height: '100%',
+    backgroundColor: '#000',
+    paddingBottom: 10,
+  },
   image: {
     width: width,
     height: 500,
+    resizeMode: 'contain',
   },
   title: {
     fontSize: 24,

@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -9,23 +9,22 @@ import {
 } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 
-const SearchInput = ({searchText, setSearchText, getMovie}) => {
+const SearchInput = ({getMovie}) => {
+  const [value, setValue] = useState();
   const navigation = useNavigation();
-
-  const changeText = async value => {
-    setSearchText(value);
-  };
 
   return (
     <SafeAreaView>
       <View style={styles.inputContainer}>
         <TextInput
           style={[styles.input]}
-          onChangeText={value => changeText(value)}
-          value={searchText}
+          onChangeText={value => {
+            getMovie(value);
+            setValue(value);
+          }}
+          value={value}
           placeholder="Search"
           placeholderTextColor={'#B9B9B9'}
-          onFocus={getMovie}
         />
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Feather name="x" size={30} color={'#B9B9B9'} style={styles.icon} />
